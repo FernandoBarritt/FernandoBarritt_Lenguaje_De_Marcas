@@ -1,0 +1,96 @@
+/*Limpiar estilos de browsers*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Empezamos a estilizar de manera general, al body*/
+ body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(61, 71, 128);
+    color: #fcf9f9;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/*Estilos para el header*/
+header {
+    background-color: rgb(61, 71, 128);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/*Estilos para el nav*/
+
+nav ul {
+list-style: none; /*Quitar los puntos de la lista*/
+margin: 0; 
+display: flex; /*Para que los elementos se alineen en fila*/
+justify-content: center; /*Centrar los elementos*/
+background-color: rgb(49, 57, 102);
+padding: 10px 0; /*10px arriba y abajo, 0 a los lados*/
+border-radius: 50px; /*Redondeado*/;
+
+}
+nav ul li {
+    margin: 0 30px; /*Separación entre elementos*/
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /*Quitar subrayado*/
+}
+
+nav ul li a:hover { /*Cuando el mouse pase por encima*/
+    background-color: rgb(124, 139, 228); 
+    border-radius: 50px;
+    padding: 5px 10px;
+}
+
+#Inicio {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(200, 211, 214);
+    color: rgb(8, 4, 1);
+    border-radius: 20px;
+ }
+
+.contenedor_imagen_fernando {
+    position: relative;
+    display: inline-block; /*Contenedor se aju
+    ste al tamaño de la imagen*/
+}
+
+.imagen_fernando {
+    border-radius: 150px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    display: block;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 150px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenedor_imagen_fernando:hover .overlay{
+    opacity: 1;
+}
