@@ -5,24 +5,56 @@
     box-sizing: border-box;
 }
 
+
 /*Empezamos a estilizar de manera general, al body*/
  body {
     font-family: Arial, sans-serif;
     background-color: rgb(61, 71, 128);
     color: #fcf9f9;
     line-height: 1.6;
-    padding: 20px;
 }
 
-/*Estilos para el header*/
-header {
-    background-color: rgb(61, 71, 128);
+h2{
+    font-size: 30px;
     text-align: center;
-    color: white;
-    padding: 20px;
+    margin: 20px 0;
+    color: rgb(49, 57, 102);
+    background-color: rgb(200, 211, 214);
+
 }
+/*----------------------------------------------------------------------------------------------------Header--------------------------------------------------------------------------------------------------------------------*/
+
+.header {
+    background-image: url('Img/me\ at\ kvalvika\ beach.JPG');
+    background-size: cover;  /* La foto cubre el header entero */
+    background-position: center 53%; 
+    height: 500px;;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align:center;
+
+}
+
+h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    top: 2%;
+    position: absolute;
+}
+
 
 /*Estilos para el nav*/
+
+nav {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
 
 nav ul {
 list-style: none; /*Quitar los puntos de la lista*/
@@ -31,7 +63,8 @@ display: flex; /*Para que los elementos se alineen en fila*/
 justify-content: center; /*Centrar los elementos*/
 background-color: rgb(49, 57, 102);
 padding: 10px 0; /*10px arriba y abajo, 0 a los lados*/
-border-radius: 50px; /*Redondeado*/;
+border-radius: 50px;;
+top: 40%;
 
 }
 nav ul li {
@@ -43,32 +76,70 @@ nav ul li a {
     text-decoration: none; /*Quitar subrayado*/
 }
 
-nav ul li a:hover { /*Cuando el mouse pase por encima*/
-    background-color: rgb(124, 139, 228); 
+nav ul li a:hover { /*Cuando el ratón pase por encima de los li de nav*/
+    background-color: rgb(124, 139, 228);
     border-radius: 50px;
     padding: 5px 10px;
 }
+nav ul li a {
+    transition: background-color 0.2s ease-out, border-radius 0.2s ease-out, padding 0.2s ease-out; /*Transición suave. Sin border ni padding solo se hace la transición de color*/
+}
 
-#Inicio {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-content: center;
-    text-align: center;
+/*Scroll suave al clickar un li del nav*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+/**--------------------------------------------------------------------------------------------------Fin de Header--------------------------------------------------------------------------------------------------*/
+
+
+#Inicio { /*En el ID solo editaremos lo más básico*/
     background-color: rgb(200, 211, 214);
     color: rgb(8, 4, 1);
-    border-radius: 20px;
+    ;
+    padding: 15px;
  }
 
-.contenedor_imagen_fernando {
+.contenedor_inicio{
+    display: flex;
+    align-items: center; /*Centrar verticalmente*/
+    justify-content: space-between; /*Espacio entre texto e imagen*/
+    gap: 20px; /*Espacio entre los elementos*/
+}
+
+.texto_inicio{
+    flex: 1; /*Para que ocupe el espacio restante*/
+    padding: 10px;
+    
+ }
+ .contenedor_imagen_fernando{
+    flex-shrink: 0; /*Para que no se reduzca el tamaño de la imagen*/
+    margin-left: 25%;
+    margin-right: 15%;
+ }
+
+.lista_inicio ul{
+    list-style: none;
+    padding: 15px;
+    background-color: rgb(49, 57, 102);
+    border-radius: 20px;
+    color:#ffffff;
+    gap: 20px;
+}
+/*-------------------------------------------------------------------En esta sección delimitada, la imagen sombreada cuando hover----------------------------------------------------------------------------------*/ 
+
+ .contenedor_imagen_fernando {
     position: relative;
-    display: inline-block; /*Contenedor se aju
-    ste al tamaño de la imagen*/
+    display: inline-block; /*Contenedor se ajuste al tamaño de la imagen*/
+}
+
+.contenedor_imagen_fernando{
+    order: 2; /*Mueve la imagen a la derecha*/
 }
 
 .imagen_fernando {
-    border-radius: 150px;
+    border-radius: 200px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     display: block;
 }
@@ -94,3 +165,5 @@ nav ul li a:hover { /*Cuando el mouse pase por encima*/
 .contenedor_imagen_fernando:hover .overlay{
     opacity: 1;
 }
+
+/*-------------------------------------------------------------------Fin de la sección delimitada, la imagen sombreada cuando hover----------------------------------------------------------------------------------*/
